@@ -32,7 +32,7 @@ test('Employees web table practice', async ({page}) => {
 // PATTERN 4 — Assert page-summary after jumping to page 2
 
 await page.getByTestId('page-2').click();
-await page.getByTestId('page-summary').toHaveText('Showing 9–16 of 24');
+await expect(page.getByTestId('page-summary')).toHaveText('Showing 9–16 of 24');
 
    
 });
